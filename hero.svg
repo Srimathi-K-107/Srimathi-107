@@ -140,7 +140,7 @@
 
     <image
       x="790" y="48" width="345" height="335"
-      xlink:href="https://raw.githubusercontent.com/Srimathi-K-107/Srimathi-K-107/main/assets/character-id.png"
+      xlink:href="assets/character-id.png"
       preserveAspectRatio="xMidYMid meet"
       clip-path="url(#portraitClip)"/>
 
