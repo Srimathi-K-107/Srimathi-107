@@ -193,7 +193,7 @@
   <image
     x="720" y="155"
     width="360" height="360"
-    xlink:href="https://raw.githubusercontent.com/Srimathi-K-107/Srimathi-K-107/main/assets/character-connect.png"
+    xlink:href="assets/character-connect.png"
     preserveAspectRatio="xMidYMax meet"/>
 
   <!-- Small floating label -->
