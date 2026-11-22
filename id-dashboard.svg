@@ -227,7 +227,7 @@
     <image
       x="100" y="253"
       width="210" height="127"
-      href="https://raw.githubusercontent.com/Srimathi-K-107/Srimathi-K-107/main/assets/character-id.png"
+      href="assets/character-id.png"
       preserveAspectRatio="xMidYMid slice"
       clip-path="url(#portraitClip)"/>
 
