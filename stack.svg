@@ -1,0 +1,447 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="600"
+     viewBox="0 0 1200 600"
+     role="img">
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d0e16"/>
+      <stop offset="100%" stop-color="#17152a"/>
+    </linearGradient>
+
+    <linearGradient id="aurora" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+
+    <radialGradient id="core">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="45%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glow">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity=".25"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="dots" width="22" height="22"
+             patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1"
+              fill="#ffffff" opacity=".07"/>
+    </pattern>
+
+    <style>
+      text {
+        font-family: Arial, sans-serif;
+      }
+
+      .heading {
+        fill: #f8fafc;
+        font-weight: bold;
+      }
+
+      .muted {
+        fill: #a1a1aa;
+      }
+
+      .orbit {
+        fill: none;
+        stroke-width: 1.4;
+        stroke-dasharray: 5 7;
+        opacity: .5;
+      }
+
+      .chip {
+        fill: #17182a;
+        stroke: #39364f;
+        stroke-width: 1;
+      }
+
+      .chiptext {
+        fill: #e4e4e7;
+        font-size: 12px;
+      }
+
+      .enter {
+        animation: enter 1s ease-out both;
+      }
+
+      .float {
+        animation: float 4s ease-in-out infinite;
+      }
+
+      .pulse {
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      .orbit-one {
+        transform-origin: 360px 285px;
+        animation: rotate-one 12s linear infinite;
+      }
+
+      .orbit-two {
+        transform-origin: 360px 285px;
+        animation: rotate-two 17s linear infinite;
+      }
+
+      .orbit-three {
+        transform-origin: 360px 285px;
+        animation: rotate-three 22s linear infinite;
+      }
+
+      .moon-one {
+        transform-origin: 360px 285px;
+        animation: rotate-one 5s linear infinite;
+      }
+
+      .moon-two {
+        transform-origin: 360px 285px;
+        animation: rotate-two 7s linear infinite;
+      }
+
+      .chipglow {
+        animation: chipglow 3s ease-in-out infinite;
+      }
+
+      @keyframes enter {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        50% { transform: translateY(-7px); }
+      }
+
+      @keyframes pulse {
+        50% { opacity: .4; }
+      }
+
+      @keyframes rotate-one {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      @keyframes rotate-two {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(-360deg); }
+      }
+
+      @keyframes rotate-three {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      @keyframes chipglow {
+        0%,100% { stroke-opacity: .25; }
+        50% { stroke-opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <!-- BACKGROUND -->
+
+  <rect width="1200" height="600" rx="26" fill="url(#bg)"/>
+  <rect width="1200" height="600" rx="26" fill="url(#dots)"/>
+
+  <circle cx="360" cy="285" r="260" fill="url(#glow)"/>
+  <circle cx="950" cy="300" r="250" fill="url(#glow)"/>
+
+  <rect x="20" y="20" width="1160" height="560"
+        rx="22" fill="none"
+        stroke="url(#aurora)" stroke-opacity=".3"/>
+
+  <!-- HEADER -->
+
+  <g class="enter">
+    <text x="55" y="61" fill="#22d3ee"
+          font-size="12" letter-spacing="4">
+      THE TECHNOLOGY BEHIND MY WORK
+    </text>
+
+    <text x="55" y="100" class="heading" font-size="30">
+      My Tech Universe
+    </text>
+
+    <text x="55" y="125" class="muted" font-size="13">
+      Technologies I use to bring ideas to life.
+    </text>
+
+    <text x="1140" y="85" text-anchor="end"
+          fill="#a78bfa" font-size="11"
+          letter-spacing="2">
+      MERN STACK DEVELOPER
+    </text>
+  </g>
+
+  <!-- LEFT ORBIT AREA -->
+
+  <rect x="45" y="150" width="625" height="390"
+        rx="20" fill="#111220"
+        stroke="#a78bfa" stroke-opacity=".3"/>
+
+  <text x="75" y="185" class="muted"
+        font-size="11" letter-spacing="2">
+    INTERACTIVE TECHNOLOGY ORBIT
+  </text>
+
+  <!-- ORBIT PATHS -->
+
+  <ellipse cx="360" cy="340" rx="245" ry="82"
+           class="orbit" stroke="#22d3ee"/>
+
+  <ellipse cx="360" cy="340" rx="200" ry="145"
+           class="orbit" stroke="#a78bfa"
+           transform="rotate(-38 360 340)"/>
+
+  <ellipse cx="360" cy="340" rx="125" ry="185"
+           class="orbit" stroke="#f472b6"
+           transform="rotate(48 360 340)"/>
+
+  <!-- STATIC ORBIT LABELS -->
+
+  <g>
+    <text x="95" y="264" fill="#22d3ee" font-size="10">
+      FRONTEND
+    </text>
+    <text x="535" y="265" fill="#a78bfa" font-size="10">
+      BACKEND
+    </text>
+    <text x="305" y="510" fill="#f472b6" font-size="10">
+      TOOLS &amp; WORKFLOW
+    </text>
+  </g>
+
+  <!-- ROTATING ORBIT 1 -->
+
+  <g class="orbit-one">
+    <circle cx="605" cy="340" r="24"
+            fill="#111c2b"
+            stroke="#22d3ee" stroke-width="2"/>
+
+    <text x="605" y="345" text-anchor="middle"
+          fill="#22d3ee" font-size="11"
+          font-weight="bold">
+      JS
+    </text>
+
+    <circle cx="115" cy="340" r="22"
+            fill="#1e1930"
+            stroke="#a78bfa" stroke-width="2"/>
+
+    <text x="115" y="344" text-anchor="middle"
+          fill="#a78bfa" font-size="10"
+          font-weight="bold">
+      CSS
+    </text>
+  </g>
+
+  <!-- ROTATING ORBIT 2 -->
+
+  <g class="orbit-two">
+    <circle cx="560" cy="190" r="23"
+            fill="#101d2b"
+            stroke="#22d3ee" stroke-width="2"/>
+
+    <text x="560" y="195" text-anchor="middle"
+          fill="#22d3ee" font-size="11"
+          font-weight="bold">
+      HTML
+    </text>
+
+    <circle cx="160" cy="490" r="24"
+            fill="#21182f"
+            stroke="#f472b6" stroke-width="2"/>
+
+    <text x="160" y="494" text-anchor="middle"
+          fill="#f472b6" font-size="10"
+          font-weight="bold">
+      GIT
+    </text>
+  </g>
+
+  <!-- ROTATING ORBIT 3 -->
+
+  <g class="orbit-three">
+    <circle cx="360" cy="155" r="24"
+            fill="#171b30"
+            stroke="#a78bfa" stroke-width="2"/>
+
+    <text x="360" y="160" text-anchor="middle"
+          fill="#a78bfa" font-size="10"
+          font-weight="bold">
+      DB
+    </text>
+
+    <circle cx="360" cy="525" r="22"
+            fill="#21182f"
+            stroke="#f472b6" stroke-width="2"/>
+
+    <text x="360" y="529" text-anchor="middle"
+          fill="#f472b6" font-size="10"
+          font-weight="bold">
+      API
+    </text>
+  </g>
+
+  <!-- CENTER CORE -->
+
+  <g class="float">
+    <circle cx="360" cy="340" r="72"
+            fill="url(#core)" class="pulse"/>
+
+    <circle cx="360" cy="340" r="48"
+            fill="#111a2c"
+            stroke="#22d3ee" stroke-width="2"/>
+
+    <circle cx="360" cy="340" r="39"
+            fill="#17213a"
+            stroke="#a78bfa" stroke-opacity=".5"/>
+
+    <text x="360" y="334" text-anchor="middle"
+          fill="#61dafb" font-size="29"
+          font-weight="bold">
+      ⚛
+    </text>
+
+    <text x="360" y="357" text-anchor="middle"
+          class="heading" font-size="11">
+      REACT
+    </text>
+  </g>
+
+  <!-- SMALL ORBITING MOONS -->
+
+  <g class="moon-one">
+    <circle cx="430" cy="340" r="10"
+            fill="#38bdf8"
+            stroke="#e0f2fe" stroke-width="1"/>
+
+    <text x="430" y="344" text-anchor="middle"
+          fill="#0d0e16" font-size="8"
+          font-weight="bold">
+      T
+    </text>
+  </g>
+
+  <g class="moon-two">
+    <circle cx="360" cy="285" r="9"
+            fill="#a78bfa"
+            stroke="#e9d5ff" stroke-width="1"/>
+
+    <text x="360" y="288" text-anchor="middle"
+          fill="#0d0e16" font-size="8"
+          font-weight="bold">
+      V
+    </text>
+  </g>
+
+  <!-- RIGHT SKILLS PANEL -->
+
+  <rect x="690" y="150" width="465" height="390"
+        rx="20" fill="#111220"
+        stroke="#22d3ee" stroke-opacity=".3"/>
+
+  <g class="enter">
+
+    <text x="720" y="185" fill="#22d3ee"
+          font-size="11" letter-spacing="2">
+      MY TOOLKIT
+    </text>
+
+    <text x="720" y="218" class="heading" font-size="22">
+      Skills &amp; Technologies
+    </text>
+
+    <!-- FRONTEND -->
+
+    <text x="720" y="255" fill="#22d3ee"
+          font-size="12" font-weight="bold">
+      01 / FRONTEND
+    </text>
+
+    <g class="chipglow">
+      <rect x="720" y="270" width="90" height="35"
+            rx="9" class="chip" stroke="#22d3ee"/>
+      <rect x="820" y="270" width="90" height="35"
+            rx="9" class="chip"/>
+      <rect x="920" y="270" width="105" height="35"
+            rx="9" class="chip"/>
+      <rect x="1035" y="270" width="90" height="35"
+            rx="9" class="chip"/>
+
+      <text x="765" y="292" text-anchor="middle" class="chiptext">HTML5</text>
+      <text x="865" y="292" text-anchor="middle" class="chiptext">CSS3</text>
+      <text x="972" y="292" text-anchor="middle" class="chiptext">JavaScript</text>
+      <text x="1080" y="292" text-anchor="middle" class="chiptext">React</text>
+    </g>
+
+    <!-- BACKEND -->
+
+    <text x="720" y="340" fill="#a78bfa"
+          font-size="12" font-weight="bold">
+      02 / BACKEND &amp; DATABASE
+    </text>
+
+    <g>
+      <rect x="720" y="355" width="95" height="35"
+            rx="9" class="chip" stroke="#a78bfa"/>
+      <rect x="825" y="355" width="95" height="35"
+            rx="9" class="chip"/>
+      <rect x="930" y="355" width="95" height="35"
+            rx="9" class="chip"/>
+      <rect x="1035" y="355" width="90" height="35"
+            rx="9" class="chip"/>
+
+      <text x="767" y="377" text-anchor="middle" class="chiptext">Node.js</text>
+      <text x="872" y="377" text-anchor="middle" class="chiptext">Express</text>
+      <text x="977" y="377" text-anchor="middle" class="chiptext">MongoDB</text>
+      <text x="1080" y="377" text-anchor="middle" class="chiptext">REST API</text>
+    </g>
+
+    <!-- TOOLS -->
+
+    <text x="720" y="425" fill="#f472b6"
+          font-size="12" font-weight="bold">
+      03 / TOOLS &amp; WORKFLOW
+    </text>
+
+    <g>
+      <rect x="720" y="440" width="95" height="35"
+            rx="9" class="chip" stroke="#f472b6"/>
+      <rect x="825" y="440" width="95" height="35"
+            rx="9" class="chip"/>
+      <rect x="930" y="440" width="95" height="35"
+            rx="9" class="chip"/>
+      <rect x="1035" y="440" width="90" height="35"
+            rx="9" class="chip"/>
+
+      <text x="767" y="462" text-anchor="middle" class="chiptext">Git</text>
+      <text x="872" y="462" text-anchor="middle" class="chiptext">GitHub</text>
+      <text x="977" y="462" text-anchor="middle" class="chiptext">Postman</text>
+      <text x="1080" y="462" text-anchor="middle" class="chiptext">VS Code</text>
+    </g>
+
+    <text x="720" y="510" class="muted" font-size="10">
+      ALWAYS LEARNING · ALWAYS BUILDING
+    </text>
+
+  </g>
+
+  <!-- FOOTER -->
+
+  <text x="600" y="565" text-anchor="middle"
+        fill="#71717a" font-size="10"
+        letter-spacing="2">
+    EXPLORE · CREATE · INNOVATE
+  </text>
+
+</svg>
